@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="student_login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="student_loginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="student_loginResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="int" type="s:int" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="student_loginSoapIn">
+    <wsdl:part name="parameters" element="tns:student_login" />
+  </wsdl:message>
+  <wsdl:message name="student_loginSoapOut">
+    <wsdl:part name="parameters" element="tns:student_loginResponse" />
+  </wsdl:message>
+  <wsdl:message name="student_loginHttpGetIn">
+    <wsdl:part name="userid" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="student_loginHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="student_loginHttpPostIn">
+    <wsdl:part name="userid" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="student_loginHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:portType name="login1Soap">
+    <wsdl:operation name="student_login">
+      <wsdl:input message="tns:student_loginSoapIn" />
+      <wsdl:output message="tns:student_loginSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="login1HttpGet">
+    <wsdl:operation name="student_login">
+      <wsdl:input message="tns:student_loginHttpGetIn" />
+      <wsdl:output message="tns:student_loginHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="login1HttpPost">
+    <wsdl:operation name="student_login">
+      <wsdl:input message="tns:student_loginHttpPostIn" />
+      <wsdl:output message="tns:student_loginHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="login1Soap" type="tns:login1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="student_login">
+      <soap:operation soapAction="http://tempuri.org/student_login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="login1Soap12" type="tns:login1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="student_login">
+      <soap12:operation soapAction="http://tempuri.org/student_login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="login1HttpGet" type="tns:login1HttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="student_login">
+      <http:operation location="/student_login" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="login1HttpPost" type="tns:login1HttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="student_login">
+      <http:operation location="/student_login" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="login1">
+    <wsdl:port name="login1Soap" binding="tns:login1Soap">
+      <soap:address location="http://localhost:49203/login.asmx" />
+    </wsdl:port>
+    <wsdl:port name="login1Soap12" binding="tns:login1Soap12">
+      <soap12:address location="http://localhost:49203/login.asmx" />
+    </wsdl:port>
+    <wsdl:port name="login1HttpGet" binding="tns:login1HttpGet">
+      <http:address location="http://localhost:49203/login.asmx" />
+    </wsdl:port>
+    <wsdl:port name="login1HttpPost" binding="tns:login1HttpPost">
+      <http:address location="http://localhost:49203/login.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

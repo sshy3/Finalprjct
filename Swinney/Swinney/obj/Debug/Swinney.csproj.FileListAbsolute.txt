@@ -1,0 +1,22 @@
+c:\users\sony\documents\visual studio 2010\Projects\Swinney\Swinney\bin\Swinney.dll
+c:\users\sony\documents\visual studio 2010\Projects\Swinney\Swinney\bin\Swinney.pdb
+c:\users\sony\documents\visual studio 2010\Projects\Swinney\Swinney\obj\Debug\Swinney.dll
+c:\users\sony\documents\visual studio 2010\Projects\Swinney\Swinney\obj\Debug\Swinney.pdb
+C:\Users\prathyusha dinne\Downloads\Swinney\Swinney\bin\Swinney.dll.config
+C:\Users\prathyusha dinne\Downloads\Swinney\Swinney\bin\Swinney.dll
+C:\Users\prathyusha dinne\Downloads\Swinney\Swinney\bin\Swinney.pdb
+C:\Users\prathyusha dinne\Downloads\Swinney\Swinney\obj\Debug\Swinney.csprojResolveAssemblyReference.cache
+C:\Users\prathyusha dinne\Downloads\Swinney\Swinney\obj\Debug\Swinney.dll
+C:\Users\prathyusha dinne\Downloads\Swinney\Swinney\obj\Debug\Swinney.pdb
+C:\Users\sree vishnu\Downloads\Compressed\Swinney\Swinney\obj\Debug\Swinney.csprojResolveAssemblyReference.cache
+C:\Users\sree vishnu\Downloads\Compressed\Swinney\Swinney\obj\Debug\Swinney.dll
+C:\Users\sree vishnu\Downloads\Compressed\Swinney\Swinney\obj\Debug\Swinney.pdb
+C:\Users\sree vishnu\Downloads\Compressed\Swinney\Swinney\bin\Swinney.dll.config
+C:\Users\sree vishnu\Downloads\Compressed\Swinney\Swinney\bin\Swinney.dll
+C:\Users\sree vishnu\Downloads\Compressed\Swinney\Swinney\bin\Swinney.pdb
+C:\Users\sree vishnu\Copy\spring 2014\ASE\project\Swinney\Swinney\bin\Swinney.dll.config
+C:\Users\sree vishnu\Copy\spring 2014\ASE\project\Swinney\Swinney\bin\Swinney.dll
+C:\Users\sree vishnu\Copy\spring 2014\ASE\project\Swinney\Swinney\bin\Swinney.pdb
+C:\Users\sree vishnu\Copy\spring 2014\ASE\project\Swinney\Swinney\obj\Debug\Swinney.csprojResolveAssemblyReference.cache
+C:\Users\sree vishnu\Copy\spring 2014\ASE\project\Swinney\Swinney\obj\Debug\Swinney.dll
+C:\Users\sree vishnu\Copy\spring 2014\ASE\project\Swinney\Swinney\obj\Debug\Swinney.pdb
